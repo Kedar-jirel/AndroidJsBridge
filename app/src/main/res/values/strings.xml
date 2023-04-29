@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JSBridge</string>
+    <string name="edit_message">Enter Msg</string>
+    <string name="button_send">SEND MSG</string>
+    <string name="message_hint">edit send message</string>
+    <string name="message_hint2">txt rec. message</string>
+    <string name="buttntxt">to Activity2</string>
+    <string name="buttnwebviewtxt">to WebView</string>
+
+
+</resources>

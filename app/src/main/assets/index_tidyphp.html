@@ -1,0 +1,127 @@
+<!doctype html><html lang="en-US">
+<head>
+<script type="text/javascript">
+    //android to WebView
+    function sendJsToWebView(message){
+        document.getElementById("inputField").value = message;
+    }
+    // WebView to Android
+    function showAndroidSnackbar(toastmsg) {
+        Android.showSnackbar(toastmsg);
+    }
+    function showAndroidToast(toastmsg) {
+        Android.showToast(toastmsg);
+    }
+    function showJsMessageInEditText() {
+        var valueReceived =  document.getElementById("inputField").value;
+        ///kt.  JSBridge.showMessageInNative(valueReceived);
+        //   Android.showMessageInEditTextText(valueReceived);
+        Android.showMessageInEditText(valueReceived);
+    }
+    function showJsMessageInTextView() {
+        var valueReceived =  document.getElementById("inputField").value;
+        Android.showMessageInEditTextText(valueReceived);
+        //  Android.showMessageInEditText(valueReceived);
+    }
+    function showjsMsgEdit2() {
+        var valueReceived =  document.getElementById("inputField").value;
+            Android.showMsgEdit2(valueReceived);
+    }    
+    function showAndroidDialog(dialogmsg) {
+        Android.showDialog(dialogmsg);
+    }
+    function moveToScreenTwo() {
+        Android.moveToNextScreen();
+    }
+    function MessageTxtView(txtview) {
+        Android.receiveMessageTxtView(txtview);
+    }
+    </script>
+<style>
+    .input {
+        width:77px;
+    }
+
+    .sendto {
+        color:#b69221;
+    }
+
+    .table {
+        border:0;
+        margin:0;
+        padding:0;
+    }
+
+    .tit {
+        color:#b69221;
+        font-size:300%;
+        margin-bottom:-6px;
+        margin-top:-11px;
+    }
+
+    .wid7 {
+        width:57px;
+    }
+
+    body {
+        background-color:#fbd7bd;
+        margin-bottom:0;
+        padding-bottom:3px;
+    }
+    /* style="margin-left:-5px;margin-bottom:3px; height:23px; height:33px; " */
+</style></head>
+
+
+<body><span><small> v 42.6 </small></span>
+<center><!-- <h3>&nbsp;</h3><h3>&nbsp;</h3> -->
+    </small><h1 class="tit">in WebView </h1>
+</center>
+
+<table><tr><td>
+    <input id="inputField" class="input" type="text" value=""> 
+    <span class="sendto"> send to: </span>
+</td><td>
+    <input onClick="showJsMessageInEditText()" class="butn"  type="button" value="Edit "/>
+    <input onClick="showJsMessageInTextView()"  class="butn"  type="button" value="Text "/>
+</td><td> &nbsp;    
+</td></tr><tr><td> 
+
+    <input type="button" class="butn" value="SnackBar" onClick="showAndroidSnackbar(' made by Javascript function : showAndroidSnackbar() ')" />
+    <input type="button" class="butn wid7" value="Toast" onClick="showAndroidToast(' made by Javascript function: showAndroidToast() ')" />
+</td><td>    
+    <input onClick="showjsMsgEdit2()" class="butn" type="button" value="Edit2 Activi2"/> 
+</td><td> &nbsp; </td></tr>
+</table>
+
+
+<!--
+colors backvio dunkel:#3700b7 vioPrimary #6200ee    green hell:#03DAC5, old  #93B874
+color plettes:
+#010f8a blau
+#addac5 weissgruen
+#de9e95 braunrose
+#dbc1ef weissrose
+#b69221 goldgelbbraun
+colorGoldYellowBrowna">#b69221
+----
+Midnight Green
+#4e5850
+Silver
+#ebebe3
+ka:   #4CAF50
+"colorGray2a">#8E8E93<
+<color name="colorAccentAStudio">#03DAC5</color>
+<color name="colorGreenAccentAStudio">#03DAC5</color>
+<color name="colorWhiteGreenc">#addac5</color>
+<color name="colorBlueTeala">#5AC8FA</color>ok
+<color name="colorBlueTealc">#64D2FF</color>
+<color name="colorBluePantoned">#5EB0E5</color>
+"colorGreenc">#30D158</color>
+Space Gray
+#52514f
+"colorGraya">#8E8E93
+Gold
+#fbd7bd
+----
+-->
+</body></html>
